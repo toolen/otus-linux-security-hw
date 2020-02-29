@@ -9,16 +9,15 @@ Vagrant.configure("2") do |config|
     vb.cpus = 2
   end
 
-  config.vm.define "attacker", primary: true do |attacker|
-    attacker.vm.box = "kalilinux/rolling"
-    attacker.vm.hostname = "attacker.dev"
-    attacker.vm.network "private_network", ip: "192.168.0.100"
+  config.vm.define "ubuntu", primary: true do |ubuntu|
+    ubuntu.vm.box = "ubuntu/xenial64"
+    ubuntu.vm.box_version = "20160319.0.0"
+    ubuntu.vm.provision "shell", path: "ubuntu-provision.sh"
   end
 
-  config.vm.define "secure" do |secure|
-    secure.vm.box = "centos/7"
-    secure.vm.hostname = "secure.dev"
-    secure.vm.network "private_network", ip: "192.168.0.200"
-  end
+  # config.vm.define "centos" do |centos|
+  #   centos.vm.box = "centos/7"
+  #   centos.vm.box_version = "1505.01"
+  # end
 
 end
