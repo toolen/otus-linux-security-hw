@@ -15,9 +15,11 @@ Vagrant.configure("2") do |config|
     ubuntu.vm.provision "shell", path: "ubuntu-provision.sh"
   end
 
-  # config.vm.define "centos" do |centos|
-  #   centos.vm.box = "centos/7"
-  #   centos.vm.box_version = "1505.01"
-  # end
+  config.vm.define "centos" do |centos|
+    centos.vm.box = "centos/7"
+    centos.vm.box_version = "1505.01"
+    centos.vm.synced_folder ".", "/vagrant", type: "rsync"
+    centos.vm.provision "shell", path: "centos-provision.sh"
+  end
 
 end
