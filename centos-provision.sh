@@ -15,6 +15,7 @@ fi
 
 if [[ ! $(id -u otus3) ]]; then
     useradd otus3
+    echo otus3:goodowltoo | chpasswd
 fi
 
 echo "==> Cоздать policikit правила разрешающих пользователю otus монтировать диски"
@@ -66,11 +67,8 @@ DEST=/etc/security/time.conf
 grep -qxF "${CODE}" $DEST || echo "${CODE}" >> $DEST
 cat $DEST | tail -n1
 
-# перезапускаем службу ssh
-systemctl reload sshd
-
 echo "==> Настроить chroot при логине через ssh для пользователя otus3"
-CH_ROOT=/home/otus/jail
+CH_ROOT=/home/otus3-jail
 if [[ ! -e $CH_ROOT ]]; then
     echo "==> Создаем папку для chroot"
     mkdir -p $CH_ROOT/bin
@@ -78,11 +76,29 @@ if [[ ! -e $CH_ROOT ]]; then
     echo "==> Копируем bash c зависимостями"
     cp /bin/bash $CH_ROOT/bin
     mkdir -p $CH_ROOT/lib64
-    cp /lib64/{libtinfo.so.5,libdl.so.2,libc.so.6,ld-linux-x86-64.so.2} $CH_ROOT/lib64
+    cp /lib64/{libtinfo.so.5,libdl.so.2,libc.so.6,ld-linux-x86-64.so.2,libattr.so.1,libpthread.so.0} $CH_ROOT/lib64
+
+    echo "==> Создаем домашнюю папку пользователя"
+    mkdir -p $CH_ROOT/home/otus3
+
+    echo "==> Копируем ls c зависимостями"
+    mkdir -p $CH_ROOT/usr/bin
+    cp /usr/bin/ls $CH_ROOT/usr/bin
+    cp /lib64/{libselinux.so.1,libcap.so.2,libacl.so.1,libc.so.6,libpcre.so.1,libdl.so.2,ld-linux-x86-64.so.2,libattr.so.1,libpthread.so.0} $CH_ROOT/lib64
+
+    echo "==> Копируем cd c зависимостями"
+    cp /usr/bin/cd $CH_ROOT/usr/bin
 
     echo "==> Добавляем ChrootDirectory в sshd_config для пользователя otus3"
     {
         echo "Match User otus3"
         echo "          ChrootDirectory $CH_ROOT"
     } >>/etc/ssh/sshd_config
+
+    echo "==> Передаем права"
+    chown -R root:root $CH_ROOT
+    chown otus3:otus3 $CH_ROOT/home/otus3
 fi
+
+# перезапускаем службу ssh
+systemctl reload sshd

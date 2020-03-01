@@ -2,13 +2,12 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.define "centos" do |subconfig|    
+  config.vm.define "centos" do |subconfig|
    subconfig.vm.box = "centos/7"
-  #  subconfig.vm.hostname="centos"    
-   subconfig.vm.network "private_network", ip: "192.168.55.11"    
-   subconfig.vm.provider "virtualbox" do |vb|      
-     vb.memory = "256"      
-     vb.cpus = "1"    
+   subconfig.vm.network "private_network", ip: "192.168.55.11"
+   subconfig.vm.provider "virtualbox" do |vb|
+     vb.memory = "256"
+     vb.cpus = "1"
      unless File.exist?('./sata1.vdi')
         vb.customize ["storagectl", :id, "--name", "SATA", "--add", "sata" ]
         vb.customize ['createhd', '--filename', './sata1.vdi', '--size', 500 * 1024]

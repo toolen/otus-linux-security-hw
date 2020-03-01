@@ -16,3 +16,9 @@ ssh otus2@192.168.55.11
 ```
 Mar  1 14:36:25 localhost sshd[5785]: fatal: Access denied for user otus2 by PAM account configuration [preauth]
 ```
+Проверка chroot для otus3. Нужно подключиться к виртуальной машине по ssh.
+```bash
+ssh otus3@192.168.55.11
+# пароль: goodowltoo
+```
+В jail есть bash, команды ls и cd
