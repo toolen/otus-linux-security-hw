@@ -4,8 +4,8 @@
 Vagrant.configure("2") do |config|
   config.vm.define "centos" do |subconfig|    
    subconfig.vm.box = "centos/7"
-   subconfig.vm.hostname="centos"    
-   subconfig.vm.network :private_network, ip: "192.168.55.11"    
+  #  subconfig.vm.hostname="centos"    
+   subconfig.vm.network "private_network", ip: "192.168.55.11"    
    subconfig.vm.provider "virtualbox" do |vb|      
      vb.memory = "256"      
      vb.cpus = "1"    
@@ -15,18 +15,18 @@ Vagrant.configure("2") do |config|
      end  
      vb.customize ['storageattach', :id, '--storagectl', 'SATA', '--port', 1, '--device', 0, '--type', 'hdd', '--medium',  './sata1.vdi']
    end
-   subconfig.vm.provision "shell", path: "provision-centos.sh"
+   subconfig.vm.provision "shell", path: "centos-provision.sh"
   end
  
-  config.vm.define "ubuntu" do |subconfig|
-   subconfig.vm.box = "ubuntu/bionic64"
-   subconfig.vm.hostname="ubuntu"
-   subconfig.vm.network :private_network, ip: "192.168.55.12"
-   subconfig.vm.provider "virtualbox" do |vb|
-     vb.memory = "256"
-     vb.cpus = "1"
-   end
-  end
+  # config.vm.define "ubuntu" do |subconfig|
+  #  subconfig.vm.box = "ubuntu/bionic64"
+  #  subconfig.vm.hostname="ubuntu"
+  #  subconfig.vm.network :private_network, ip: "192.168.55.12"
+  #  subconfig.vm.provider "virtualbox" do |vb|
+  #    vb.memory = "256"
+  #    vb.cpus = "1"
+  #  end
+  # end
  
  #config.vm.define "kali" do |subconfig|
  #  subconfig.vm.box = "offensive-security/kali-linux"
