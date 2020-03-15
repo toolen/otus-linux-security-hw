@@ -1,0 +1,3 @@
+[submodule "websocket-sample"]
+	path = websocket-sample
+	url = https://gitlab.com/erlong15/websocket-sample.git

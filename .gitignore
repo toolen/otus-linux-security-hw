@@ -1,0 +1,6 @@
+.idea
+.vagrant
+/venv
+snyk*
+ubuntu*.log
+*.vdi

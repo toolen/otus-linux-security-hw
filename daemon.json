@@ -1,0 +1,23 @@
+{
+  "icc": false,
+  "live-restore": true,
+  "userland-proxy": false,
+  "no-new-privileges": true,
+  "userns-remap": "vagrant:vagrant",
+  "default-ulimits": {
+    "nofile": {
+      "Name": "nofile",
+      "Soft": 20000,
+      "Hard": 40000
+    }
+  },
+  "tls": true,
+  "tlsverify": true,
+  "tlscacert": "/root/docker-ca/ca-cert.pem",
+  "tlscert": "/var/docker/server-cert.pem",
+  "tlskey": "/var/docker/server-key.pem",
+  "log-driver": "syslog",
+  "log-opts": {
+    "syslog-address": "udp://127.0.0.1:514"
+  }
+}
