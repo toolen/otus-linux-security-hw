@@ -18,11 +18,13 @@ generate_password() {
 DISK=/dev/sdb
 DIR=/var/lib/docker
 if [[ ! $(df | grep ${DISK}) ]]; then
+  echo "==> 1.1 Ensure a separate partition for containers has been created -> Монтируем /var/lib/docker в отдельный раздел"
   parted -s $DISK mklabel msdos
   parted -s -a opt $DISK mkpart primary ext4 0% 100%
   mkfs.ext4 "${DISK}1" >/dev/null
   mkdir -p $DIR
   mount "${DISK}1" $DIR
+  echo "${DISK}1 $DIR ext4 defaults 0 0" >>/etc/fstab
 fi
 
 if ! [[ -x "$(command -v docker)" ]]; then
@@ -35,18 +37,19 @@ echo "==> Устанавливаем syslog docker docker-compose"
 yum install -y nano syslog docker-ce docker-ce-cli containerd.io >/dev/null
 echo "==> Устанавливаем trivy"
 rpm -ivh https://github.com/aquasecurity/trivy/releases/download/v0.5.2/trivy_0.5.2_Linux-64bit.rpm >/dev/null
-echo "==> Запускаем rsyslog"
+echo "==> 2.12 Ensure centralized and remote logging is configured -> Запускаем rsyslog"
 systemctl start rsyslog
 echo "==> Запускаем docker"
 systemctl start docker
 
-echo "==> Конфигурируем auditd"
+echo "==> 1.5 - 1.13 Ensure auditing is configured -> Конфигурируем auditd"
 RULESD_DIR=/etc/audit/rules.d
 AUDIT_RULES=$RULESD_DIR/audit.rules
 DOCKER_RULES=$RULESD_DIR/docker.rules
 if [[ ! -e $DOCKER_RULES ]]; then
   cat $AUDIT_RULES >$DOCKER_RULES
   {
+    echo "-w /usr/bin/docker -k docker"
     echo "-w /usr/bin/dockerd -k docker"
     echo "-w /var/lib/docker -k docker"
     echo "-w /etc/docker -k docker"
@@ -62,20 +65,18 @@ if [[ ! -e $DOCKER_RULES ]]; then
   auditctl -l
 fi
 
- if [[ ! -e /etc/docker/policies ]]; then
-   echo "==> Создаем docker policies"
-   mkdir -p /etc/docker/policies
-   {
-     echo "package docker.authz"
-     echo ""
-     echo "allow = true"
-   } > /etc/docker/policies/authz.rego
-   docker plugin install --grant-all-permissions --alias opa-docker-authz openpolicyagent/opa-docker-authz-v2:0.5 opa-args="-policy-file /opa/policies/authz.rego"
-   docker plugin ls
- fi
+if [[ ! -e /etc/docker/policies ]]; then
+  echo "==> 2.11 - Ensure that authorization for Docker client commands is enabled -> Пишем authz.rego"
+  mkdir -p /etc/docker/policies
+  {
+    echo "package docker.authz"
+    echo ""
+    echo "allow = true"
+  } > /etc/docker/policies/authz.rego
+fi
 
-echo "==> Конфигурируем docker"
 if [[ ! -e /root/docker-ca ]]; then
+  echo "==> 2.6 Ensure TLS authentication for Docker daemon is configured -> Генерируем сертификаты"
   mkdir -p /root/docker-ca
   cd /root/docker-ca
   echo "==> Генерируем passphrase"
@@ -103,19 +104,23 @@ if [[ ! -e /root/docker-ca ]]; then
   echo "==> Генерируем клиентский ключ"
   openssl genrsa -out "key.pem" 4096 >/dev/null
   echo "==> Генерируем клиентский сертификат"
-  openssl req -subj "/CN=$CN" -new -key "key.pem" -out client.csr
+  openssl req -subj "/CN=root" -new -key "key.pem" -out client.csr
   echo "extendedKeyUsage = clientAuth" > extfile.cnf
   openssl x509 -req -days 365 -sha256 -in client.csr -passin "pass:$PASS" -CA "/root/docker-ca/ca-cert.pem" -CAkey "/root/docker-ca/ca-key.pem" -CAcreateserial -out "cert.pem" -extfile extfile.cnf
 fi
 
 #export DOCKER_CONTENT_TRUST=1
-echo "==> Создаем subuid и subgid"
+echo "==> 2.8 Enable user namespace support (Scored) -> Создаем subuid и subgid"
 echo "vagrant:231072:65536" >/etc/subuid
 echo "vagrant:231072:65536" >/etc/subgid
+
+echo "==> 2.1 Ensure network traffic is restricted between containers on the default bridge -> Конфигурируем daemon.json"
+echo "==> 2.14 Ensure live restore is Enabled -> Конфигурируем daemon.json"
+echo "==> 2.15 Ensure Userland Proxy is Disabled -> Конфигурируем daemon.json"
+echo "==> 2.18 Ensure containers are restricted from acquiring new privileges -> Конфигурируем daemon.json"
+echo "==> 5.18 Ensure the default ulimit is overwritten at runtime, only if needed -> Конфигурируем daemon.json"
 echo "==> Копируем daemon.json"
 cp /vagrant/daemon.json /etc/docker
-echo "==> Перезапускаем docker"
-systemctl restart docker
 
 echo "==> Добавляем пользователя vagrant в группу docker"
 usermod -aG docker vagrant >/dev/null
@@ -124,21 +129,6 @@ echo "==> Собираем образ"
 IMAGE_NAME=signal-server:1.0
 cd /vagrant
 docker build -t ${IMAGE_NAME} . >/dev/null
-
-echo "==> DOCKER-BENCH-SECURITY"
-echo "==> DOCKER-BENCH-SECURITY: скачиваем образ docker/docker-bench-security"
-docker pull docker/docker-bench-security >/dev/null
-echo "==> DOCKER-BENCH-SECURITY: запускаем проверку"
-docker run --net host --pid host --userns host --cap-add audit_control \
-   -e DOCKER_CONTENT_TRUST=0 \
-   -v /etc:/etc:ro \
-   -v /usr/bin/docker-containerd:/usr/bin/docker-containerd:ro \
-   -v /usr/bin/docker-runc:/usr/bin/docker-runc:ro \
-   -v /usr/lib/systemd:/usr/lib/systemd:ro \
-   -v /var/lib:/var/lib:ro \
-   -v /var/run/docker.sock:/var/run/docker.sock:ro \
-   --label docker_bench_security \
-   docker/docker-bench-security ./docker-bench-security.sh
 
 echo "==> TRIVY"
 echo "==> TRIVY: запускаем проверку"
@@ -155,3 +145,25 @@ docker run \
 -v "/vagrant:/project" \
 -v "/var/run/docker.sock:/var/run/docker.sock" \
 snyk/snyk-cli:docker test --docker ${IMAGE_NAME} --file=Dockerfile
+
+echo "==> Перезапускаем docker чтобы применить daemon.json"
+systemctl restart docker
+echo "==> 2.11 - Ensure that authorization for Docker client commands is enabled -> Устанавливаем opa-docker-authz"
+docker plugin install --grant-all-permissions openpolicyagent/opa-docker-authz-v2:0.5 opa-args="-policy-file /opa/policies/authz.rego"
+echo ',"authorization-plugins": ["openpolicyagent/opa-docker-authz-v2:0.5"]' >>/etc/docker/daemon.json
+systemctl restart docker
+
+echo "==> DOCKER-BENCH-SECURITY"
+echo "==> DOCKER-BENCH-SECURITY: скачиваем образ docker/docker-bench-security"
+docker pull docker/docker-bench-security >/dev/null
+echo "==> DOCKER-BENCH-SECURITY: запускаем проверку"
+docker run --net host --pid host --userns host --cap-add audit_control \
+   -e DOCKER_CONTENT_TRUST=0 \
+   -v /etc:/etc:ro \
+   -v /usr/bin/docker-containerd:/usr/bin/docker-containerd:ro \
+   -v /usr/bin/docker-runc:/usr/bin/docker-runc:ro \
+   -v /usr/lib/systemd:/usr/lib/systemd:ro \
+   -v /var/lib:/var/lib:ro \
+   -v /var/run/docker.sock:/var/run/docker.sock:ro \
+   --label docker_bench_security \
+   docker/docker-bench-security ./docker-bench-security.sh
