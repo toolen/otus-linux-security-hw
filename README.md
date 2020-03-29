@@ -20,11 +20,7 @@ vagrant up && sleep 60 && vagrant up --provision
 ## Замечания по DOCKER-BENCH-SECURITY (DBC)
 Некоторые проверки DBC работают некорректно, например:
 ##### 1.1 - Ensure a separate partition for containers has been created
-Выводит [WARN], хотя *df -h* показывает, что папка /var/lib/docker примонтирована в отдельный раздел  
-##### 1.5 - Ensure auditing is configured for the Docker daemon
-Выводит [WARN], хотя *auditctl -l* показывает, что /usr/bin/dockerd под контролем auditd
-##### 2.11 - Ensure that authorization for Docker client commands is enabled
-Попробовал плагин [opa-docker-authz](https://github.com/open-policy-agent/opa-docker-authz), после перезапуска dockerd плагин теряется, в списке *docker plugin ls* его больше нет.
+Выводит [WARN], из-за user-ns, т.к. DockerRootDir становится не /var/lib/docker, а /var/lib/docker/$UID.$UID, и это значение проверяется командой mountpoint -q -- "$(docker info -f '{{ .DockerRootDir }}')"
 ##### 4.5 - Ensure Content trust for Docker is Enabled
 После включения DCT перестают пулиться образы с hub.docker.com
 ##### 4.6 - Ensure HEALTHCHECK instructions have been added to the container image
