@@ -28,8 +28,9 @@ echo "==> Смотрим статус SELinux"
 sestatus | grep "SELinux status"
 
 echo "==> Меняем порт nginx на 8080"
-sed 's/listen       80 default_server;/listen       8080 default_server;' /etc/nginx/nginx.conf
-sed 's/listen       [::]:80 default_server;/listen       [::]:8080 default_server;' /etc/nginx/nginx.conf
+NGINX_CONF=/etc/nginx/nginx.conf
+sed -i -e"s/listen       80 default_server;/listen       8080 default_server;/" ${NGINX_CONF}
+sed -i -e"s/listen       \[::\]:80 default_server;/listen       \[::\]:8080 default_server;/" ${NGINX_CONF}
 
 #systemctl enable --now nginx
 
