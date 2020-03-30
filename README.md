@@ -22,7 +22,7 @@ vagrant up && sleep 60 && vagrant up --provision
 ##### 1.1 - Ensure a separate partition for containers has been created
 Выводит [WARN], из-за user-ns, т.к. DockerRootDir становится не /var/lib/docker, а /var/lib/docker/$UID.$UID, и это значение проверяется командой mountpoint -q -- "$(docker info -f '{{ .DockerRootDir }}')"
 ##### 4.5 - Ensure Content trust for Docker is Enabled
-После включения DCT перестают пулиться образы с hub.docker.com
+После включения DCT перестают пулиться образы с hub.docker.com, т.к скачиваемые образы не имеют цифровых подписей.
 ##### 4.6 - Ensure HEALTHCHECK instructions have been added to the container image
 В приложении не предусмотрена ручка для хелсчека, в базовом образе python:3.8.2-alpine3.11 тоже
 ##### 4.9  - Ensure COPY is used instead of ADD in Dockerfile
