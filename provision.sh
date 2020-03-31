@@ -14,17 +14,6 @@ yum install -y nano setools policycoreutils policycoreutils-python setroubleshoo
 echo "==> Перезапускаем auditd"
 service auditd restart >/dev/null
 
-#if [[ $(firewall-cmd --state) != "running" ]]; then
-#  echo "==> Включаем faerwalld"
-#  systemctl start firewalld >/dev/null
-#fi
-#
-#echo "==> Открываем 80й порт"
-#firewall-cmd --permanent --add-port=80/tcp >/dev/null
-#
-#echo "==> Перезапускаем faerwalld"
-#firewall-cmd --reload >/dev/null
-
 echo "==> Смотрим статус SELinux"
 sestatus | grep "SELinux status"
 
