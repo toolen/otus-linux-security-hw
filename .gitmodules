@@ -1,0 +1,3 @@
+[submodule "otus-linux-sec"]
+	path = otus-linux-sec
+	url = https://github.com/mbfx/otus-linux-sec
