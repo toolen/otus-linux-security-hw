@@ -1,9 +1,18 @@
 # otus-linux-security-hw
 Репозиторий домашних заданий по курсу ["Безопасность Linux"](https://otus.ru/lessons/bezopasnost-linux/)
 
-Домашние задания:
-1. [Развернуть лабораторную среду на базе Kali Linux и CentOS с помощью Vagrant](https://github.com/toolen/otus-linux-security-hw/tree/hw-01)
-2. [Освоить практические примеры использования chroot, apparmor, pam.d, polkit](https://github.com/toolen/otus-linux-security-hw/tree/hw-02)
-3. [Практика с SELinux](https://github.com/toolen/otus-linux-security-hw/tree/hw-03)
-4. [Исследовать уязвимости уровня ядра Linux](https://github.com/toolen/otus-linux-security-hw/tree/hw-06)
-5. [Упаковать приложение в docker, провести харденинг собранного образа](https://github.com/toolen/otus-linux-security-hw/tree/hw-05)
+## Отчет
+1. [HIDS установлен](https://raw.githubusercontent.com/toolen/otus-linux-security-hw/hw-06-ossim/hids-installed.png)
+2. [Хосты отображаются](https://raw.githubusercontent.com/toolen/otus-linux-security-hw/hw-06-ossim/hosts-list.png)
+3. [Сканирование запущено](https://raw.githubusercontent.com/toolen/otus-linux-security-hw/hw-06-ossim/scan-before-fix-in-progress.png)
+4. [Отчет о сканировании](https://raw.githubusercontent.com/toolen/otus-linux-security-hw/hw-06-ossim/ScanResult_20200513_before_fix.pdf)
+5. Критическая уязвимость "SSH Brute Force Logins With Default Credentials Reporting" на стр.6. Устраняем меняя пароль пользователя и запрещая подключение через ssh под рутом.
+6. [Запускаем повторное сканирование](https://raw.githubusercontent.com/toolen/otus-linux-security-hw/hw-06-ossim/scan-after-fix-in-progress.png)
+7. [Отчет после исправления уязвимости](https://raw.githubusercontent.com/toolen/otus-linux-security-hw/hw-06-ossim/ScanResult_20200513_after_fix.pdf)
+8. [Сравнение отчетов до и после](https://raw.githubusercontent.com/toolen/otus-linux-security-hw/hw-06-ossim/report-compare.png)
+
+## Установка HIDS в MSF
+```shell
+sudo apt-get install -y libevent-dev
+sudo PCRE2_SYSTEM=no ./install.sh
+```
