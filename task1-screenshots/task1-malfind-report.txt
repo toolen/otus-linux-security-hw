@@ -1,0 +1,883 @@
+Process: networkd-dispat Pid: 573 Address: 0x7fad8534c000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007fad8534c000  00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00   ........C.......
+0x007fad8534c010  49 bb d0 de c8 81 ad 7f 00 00 49 ba 10 c0 34 85   I.........I...4.
+0x007fad8534c020  ad 7f 00 00 f8 49 ff e3 68 00 4c 02 00 00 00 00   .....I..h.L.....
+0x007fad8534c030  20 89 65 82 ad 7f 00 00 50 00 4c 02 00 00 00 00   ..e.....P.L.....
+
+0x7fad8534c000 0000             ADD [RAX], AL
+0x7fad8534c002 0000             ADD [RAX], AL
+0x7fad8534c004 0000             ADD [RAX], AL
+0x7fad8534c006 0000             ADD [RAX], AL
+0x7fad8534c008 430000           ADD [R8], AL
+0x7fad8534c00b 0000             ADD [RAX], AL
+0x7fad8534c00d 0000             ADD [RAX], AL
+0x7fad8534c00f 0049bb           ADD [RCX-0x45], CL
+0x7fad8534c012 d0de             RCR DH, 0x1
+0x7fad8534c014 c881ad7f         ENTER 0xad81, 0x7f
+0x7fad8534c018 0000             ADD [RAX], AL
+0x7fad8534c01a 49ba10c03485ad7f0000 MOV R10, 0x7fad8534c010
+0x7fad8534c024 f8               CLC
+0x7fad8534c025 49ffe3           JMP R11
+0x7fad8534c028 68004c0200       PUSH DWORD 0x24c00
+0x7fad8534c02d 0000             ADD [RAX], AL
+0x7fad8534c02f 0020             ADD [RAX], AH
+0x7fad8534c031 896582           MOV [RBP-0x7e], ESP
+0x7fad8534c034 ad               LODSD
+0x7fad8534c035 7f00             JG 0x7fad8534c037
+0x7fad8534c037 005000           ADD [RAX+0x0], DL
+0x7fad8534c03a 4c0200           ADD R8B, [RAX]
+0x7fad8534c03d 0000             ADD [RAX], AL
+0x7fad8534c03f 00               DB 0x0
+
+Process: unattended-upgr Pid: 657 Address: 0x7f96a8967000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007f96a8967000  00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00   ........C.......
+0x007f96a8967010  49 bb d0 1e e1 a3 96 7f 00 00 49 ba 10 70 96 a8   I.........I..p..
+0x007f96a8967020  96 7f 00 00 f8 49 ff e3 08 89 84 02 00 00 00 00   .....I..........
+0x007f96a8967030  20 59 4c a4 96 7f 00 00 f0 88 84 02 00 00 00 00   .YL.............
+
+0x7f96a8967000 0000             ADD [RAX], AL
+0x7f96a8967002 0000             ADD [RAX], AL
+0x7f96a8967004 0000             ADD [RAX], AL
+0x7f96a8967006 0000             ADD [RAX], AL
+0x7f96a8967008 430000           ADD [R8], AL
+0x7f96a896700b 0000             ADD [RAX], AL
+0x7f96a896700d 0000             ADD [RAX], AL
+0x7f96a896700f 0049bb           ADD [RCX-0x45], CL
+0x7f96a8967012 d01e             RCR BYTE [RSI], 0x1
+0x7f96a8967014 e1a3             LOOPZ 0x7f96a8966fb9
+0x7f96a8967016 96               XCHG ESI, EAX
+0x7f96a8967017 7f00             JG 0x7f96a8967019
+0x7f96a8967019 0049ba           ADD [RCX-0x46], CL
+0x7f96a896701c 107096           ADC [RAX-0x6a], DH
+0x7f96a896701f a896             TEST AL, 0x96
+0x7f96a8967021 7f00             JG 0x7f96a8967023
+0x7f96a8967023 00f8             ADD AL, BH
+0x7f96a8967025 49ffe3           JMP R11
+0x7f96a8967028 088984020000     OR [RCX+0x284], CL
+0x7f96a896702e 0000             ADD [RAX], AL
+0x7f96a8967030 20594c           AND [RCX+0x4c], BL
+0x7f96a8967033 a4               MOVSB
+0x7f96a8967034 96               XCHG ESI, EAX
+0x7f96a8967035 7f00             JG 0x7f96a8967037
+0x7f96a8967037 00f0             ADD AL, DH
+0x7f96a8967039 88840200000000   MOV [RDX+RAX+0x0], AL
+
+Process: gnome-shell Pid: 835 Address: 0x21d66d402000 File: Anonymous Mapping
+Protection: VM_READ|VM_EXEC
+Flags: VM_READ|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x0021d66d402000  00 00 00 00 00 00 00 00 40 10 47 d4 c8 7f 00 00   ........@.G.....
+0x0021d66d402010  49 bb e8 62 3d 6e 44 56 00 00 4d 8b 1b 4c 8b 44   I..b=nDV..M..L.D
+0x0021d66d402020  24 08 4d 8b c8 49 c1 e8 08 41 83 e1 0f 45 85 c9   $.M..I...A...E..
+0x0021d66d402030  0f 84 33 00 00 00 41 83 f9 01 0f 84 29 00 00 00   ..3...A.....)...
+
+0x21d66d402000 0000             ADD [RAX], AL
+0x21d66d402002 0000             ADD [RAX], AL
+0x21d66d402004 0000             ADD [RAX], AL
+0x21d66d402006 0000             ADD [RAX], AL
+0x21d66d402008 401047d4         ADC [RDI-0x2c], AL
+0x21d66d40200c c87f0000         ENTER 0x7f, 0x0
+0x21d66d402010 49bbe8623d6e44560000 MOV R11, 0x56446e3d62e8
+0x21d66d40201a 4d8b1b           MOV R11, [R11]
+0x21d66d40201d 4c8b442408       MOV R8, [RSP+0x8]
+0x21d66d402022 4d8bc8           MOV R9, R8
+0x21d66d402025 49c1e808         SHR R8, 0x8
+0x21d66d402029 4183e10f         AND R9D, 0xf
+0x21d66d40202d 4585c9           TEST R9D, R9D
+0x21d66d402030 0f8433000000     JZ 0x21d66d402069
+0x21d66d402036 4183f901         CMP R9D, 0x1
+0x21d66d40203a 0f8429000000     JZ 0x21d66d402069
+
+Process: gnome-shell Pid: 835 Address: 0x7fc8d4304000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007fc8d4304000  00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00   ........C.......
+0x007fc8d4304010  49 bb d0 0e df 07 c9 7f 00 00 49 ba 10 40 30 d4   I.........I..@0.
+0x007fc8d4304020  c8 7f 00 00 f8 49 ff e3 b8 dc 97 6e 44 56 00 00   .....I.....nDV..
+0x007fc8d4304030  90 01 ad 0c c9 7f 00 00 a0 dc 97 6e 44 56 00 00   ...........nDV..
+
+0x7fc8d4304000 0000             ADD [RAX], AL
+0x7fc8d4304002 0000             ADD [RAX], AL
+0x7fc8d4304004 0000             ADD [RAX], AL
+0x7fc8d4304006 0000             ADD [RAX], AL
+0x7fc8d4304008 430000           ADD [R8], AL
+0x7fc8d430400b 0000             ADD [RAX], AL
+0x7fc8d430400d 0000             ADD [RAX], AL
+0x7fc8d430400f 0049bb           ADD [RCX-0x45], CL
+0x7fc8d4304012 d00e             ROR BYTE [RSI], 0x1
+0x7fc8d4304014 df07             FILD WORD [RDI]
+0x7fc8d4304016 c9               LEAVE
+0x7fc8d4304017 7f00             JG 0x7fc8d4304019
+0x7fc8d4304019 0049ba           ADD [RCX-0x46], CL
+0x7fc8d430401c 104030           ADC [RAX+0x30], AL
+0x7fc8d430401f d4               DB 0xd4
+0x7fc8d4304020 c87f0000         ENTER 0x7f, 0x0
+0x7fc8d4304024 f8               CLC
+0x7fc8d4304025 49ffe3           JMP R11
+0x7fc8d4304028 b8dc976e44       MOV EAX, 0x446e97dc
+0x7fc8d430402d 56               PUSH RSI
+0x7fc8d430402e 0000             ADD [RAX], AL
+0x7fc8d4304030 90               NOP
+0x7fc8d4304031 01ad0cc97f00     ADD [RBP+0x7fc90c], EBP
+0x7fc8d4304037 00a0dc976e44     ADD [RAX+0x446e97dc], AH
+0x7fc8d430403d 56               PUSH RSI
+0x7fc8d430403e 0000             ADD [RAX], AL
+
+Process: gnome-shell Pid: 835 Address: 0x7fc8d4500000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007fc8d4500000  00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00   ........C.......
+0x007fc8d4500010  49 bb d0 0e df 07 c9 7f 00 00 49 ba 10 00 50 d4   I.........I...P.
+0x007fc8d4500020  c8 7f 00 00 f9 49 ff e3 08 91 a3 6e 44 56 00 00   .....I.....nDV..
+0x007fc8d4500030  90 01 ad 0c c9 7f 00 00 f0 90 a3 6e 44 56 00 00   ...........nDV..
+
+0x7fc8d4500000 0000             ADD [RAX], AL
+0x7fc8d4500002 0000             ADD [RAX], AL
+0x7fc8d4500004 0000             ADD [RAX], AL
+0x7fc8d4500006 0000             ADD [RAX], AL
+0x7fc8d4500008 430000           ADD [R8], AL
+0x7fc8d450000b 0000             ADD [RAX], AL
+0x7fc8d450000d 0000             ADD [RAX], AL
+0x7fc8d450000f 0049bb           ADD [RCX-0x45], CL
+0x7fc8d4500012 d00e             ROR BYTE [RSI], 0x1
+0x7fc8d4500014 df07             FILD WORD [RDI]
+0x7fc8d4500016 c9               LEAVE
+0x7fc8d4500017 7f00             JG 0x7fc8d4500019
+0x7fc8d4500019 0049ba           ADD [RCX-0x46], CL
+0x7fc8d450001c 1000             ADC [RAX], AL
+0x7fc8d450001e 50               PUSH RAX
+0x7fc8d450001f d4               DB 0xd4
+0x7fc8d4500020 c87f0000         ENTER 0x7f, 0x0
+0x7fc8d4500024 f9               STC
+0x7fc8d4500025 49ffe3           JMP R11
+0x7fc8d4500028 0891a36e4456     OR [RCX+0x56446ea3], DL
+0x7fc8d450002e 0000             ADD [RAX], AL
+0x7fc8d4500030 90               NOP
+0x7fc8d4500031 01ad0cc97f00     ADD [RBP+0x7fc90c], EBP
+0x7fc8d4500037 00f0             ADD AL, DH
+0x7fc8d4500039 90               NOP
+0x7fc8d450003a a3               DB 0xa3
+0x7fc8d450003b 6e               OUTS DX, BYTE [RSI]
+0x7fc8d450003c 4456             PUSH RSI
+0x7fc8d450003e 0000             ADD [RAX], AL
+
+Process: gnome-shell Pid: 835 Address: 0x7fc8f4100000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007fc8f4100000  00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00   ........C.......
+0x007fc8f4100010  49 bb d0 0e df 07 c9 7f 00 00 49 ba 10 00 10 f4   I.........I.....
+0x007fc8f4100020  c8 7f 00 00 f8 49 ff e3 38 1f 8c 6e 44 56 00 00   .....I..8..nDV..
+0x007fc8f4100030  90 01 ad 0c c9 7f 00 00 20 1f 8c 6e 44 56 00 00   ...........nDV..
+
+0x7fc8f4100000 0000             ADD [RAX], AL
+0x7fc8f4100002 0000             ADD [RAX], AL
+0x7fc8f4100004 0000             ADD [RAX], AL
+0x7fc8f4100006 0000             ADD [RAX], AL
+0x7fc8f4100008 430000           ADD [R8], AL
+0x7fc8f410000b 0000             ADD [RAX], AL
+0x7fc8f410000d 0000             ADD [RAX], AL
+0x7fc8f410000f 0049bb           ADD [RCX-0x45], CL
+0x7fc8f4100012 d00e             ROR BYTE [RSI], 0x1
+0x7fc8f4100014 df07             FILD WORD [RDI]
+0x7fc8f4100016 c9               LEAVE
+0x7fc8f4100017 7f00             JG 0x7fc8f4100019
+0x7fc8f4100019 0049ba           ADD [RCX-0x46], CL
+0x7fc8f410001c 1000             ADC [RAX], AL
+0x7fc8f410001e 10f4             ADC AH, DH
+0x7fc8f4100020 c87f0000         ENTER 0x7f, 0x0
+0x7fc8f4100024 f8               CLC
+0x7fc8f4100025 49ffe3           JMP R11
+0x7fc8f4100028 381f             CMP [RDI], BL
+0x7fc8f410002a 8c6e44           MOV [RSI+0x44], GS
+0x7fc8f410002d 56               PUSH RSI
+0x7fc8f410002e 0000             ADD [RAX], AL
+0x7fc8f4100030 90               NOP
+0x7fc8f4100031 01ad0cc97f00     ADD [RBP+0x7fc90c], EBP
+0x7fc8f4100037 0020             ADD [RAX], AH
+0x7fc8f4100039 1f               DB 0x1f
+0x7fc8f410003a 8c6e44           MOV [RSI+0x44], GS
+0x7fc8f410003d 56               PUSH RSI
+0x7fc8f410003e 0000             ADD [RAX], AL
+
+Process: gnome-shell Pid: 835 Address: 0x7fc90ea1e000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007fc90ea1e000  64 4c 8b 1c 25 c8 fb ff ff 41 ff a3 58 34 00 00   dL..%....A..X4..
+0x007fc90ea1e010  64 4c 8b 1c 25 c8 fb ff ff 41 ff a3 58 34 00 00   dL..%....A..X4..
+0x007fc90ea1e020  64 4c 8b 1c 25 c8 fb ff ff 41 ff a3 58 34 00 00   dL..%....A..X4..
+0x007fc90ea1e030  64 4c 8b 1c 25 c8 fb ff ff 41 ff a3 58 34 00 00   dL..%....A..X4..
+
+0x7fc90ea1e000 644c8b1c25c8fbffff MOV R11, [FS:0xfffffffffffffbc8]
+0x7fc90ea1e009 41ffa358340000   JMP QWORD [R11+0x3458]
+0x7fc90ea1e010 644c8b1c25c8fbffff MOV R11, [FS:0xfffffffffffffbc8]
+0x7fc90ea1e019 41ffa358340000   JMP QWORD [R11+0x3458]
+0x7fc90ea1e020 644c8b1c25c8fbffff MOV R11, [FS:0xfffffffffffffbc8]
+0x7fc90ea1e029 41ffa358340000   JMP QWORD [R11+0x3458]
+0x7fc90ea1e030 644c8b1c25c8fbffff MOV R11, [FS:0xfffffffffffffbc8]
+0x7fc90ea1e039 41ffa358340000   JMP QWORD [R11+0x3458]
+
+Process: Xwayland Pid: 1034 Address: 0x7f77c6470000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007f77c6470000  64 4c 8b 1c 25 38 fc ff ff 41 ff a3 58 34 00 00   dL..%8...A..X4..
+0x007f77c6470010  64 4c 8b 1c 25 38 fc ff ff 41 ff a3 58 34 00 00   dL..%8...A..X4..
+0x007f77c6470020  64 4c 8b 1c 25 38 fc ff ff 41 ff a3 58 34 00 00   dL..%8...A..X4..
+0x007f77c6470030  64 4c 8b 1c 25 38 fc ff ff 41 ff a3 58 34 00 00   dL..%8...A..X4..
+
+0x7f77c6470000 644c8b1c2538fcffff MOV R11, [FS:0xfffffffffffffc38]
+0x7f77c6470009 41ffa358340000   JMP QWORD [R11+0x3458]
+0x7f77c6470010 644c8b1c2538fcffff MOV R11, [FS:0xfffffffffffffc38]
+0x7f77c6470019 41ffa358340000   JMP QWORD [R11+0x3458]
+0x7f77c6470020 644c8b1c2538fcffff MOV R11, [FS:0xfffffffffffffc38]
+0x7f77c6470029 41ffa358340000   JMP QWORD [R11+0x3458]
+0x7f77c6470030 644c8b1c2538fcffff MOV R11, [FS:0xfffffffffffffc38]
+0x7f77c6470039 41ffa358340000   JMP QWORD [R11+0x3458]
+
+Process: gnome-shell Pid: 1389 Address: 0x2cfca670b000 File: Anonymous Mapping
+Protection: VM_READ|VM_EXEC
+Flags: VM_READ|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x002cfca670b000  00 00 00 00 00 00 00 00 40 10 67 92 1d 7f 00 00   ........@.g.....
+0x002cfca670b010  49 bb e8 68 70 16 63 55 00 00 4d 8b 1b 4c 8b 44   I..hp.cU..M..L.D
+0x002cfca670b020  24 08 4d 8b c8 49 c1 e8 08 41 83 e1 0f 45 85 c9   $.M..I...A...E..
+0x002cfca670b030  0f 84 33 00 00 00 41 83 f9 01 0f 84 29 00 00 00   ..3...A.....)...
+
+0x2cfca670b000 0000             ADD [RAX], AL
+0x2cfca670b002 0000             ADD [RAX], AL
+0x2cfca670b004 0000             ADD [RAX], AL
+0x2cfca670b006 0000             ADD [RAX], AL
+0x2cfca670b008 40106792         ADC [RDI-0x6e], SPL
+0x2cfca670b00c 1d7f000049       SBB EAX, 0x4900007f
+0x2cfca670b011 bbe8687016       MOV EBX, 0x167068e8
+0x2cfca670b016 635500           MOVSXD EDX, DWORD [RBP+0x0]
+0x2cfca670b019 004d8b           ADD [RBP-0x75], CL
+0x2cfca670b01c 1b4c8b44         SBB ECX, [RBX+RCX*4+0x44]
+0x2cfca670b020 2408             AND AL, 0x8
+0x2cfca670b022 4d8bc8           MOV R9, R8
+0x2cfca670b025 49c1e808         SHR R8, 0x8
+0x2cfca670b029 4183e10f         AND R9D, 0xf
+0x2cfca670b02d 4585c9           TEST R9D, R9D
+0x2cfca670b030 0f8433000000     JZ 0x2cfca670b069
+0x2cfca670b036 4183f901         CMP R9D, 0x1
+0x2cfca670b03a 0f8429000000     JZ 0x2cfca670b069
+
+Process: gnome-shell Pid: 1389 Address: 0x2cfca673b000 File: Anonymous Mapping
+Protection: VM_READ|VM_EXEC
+Flags: VM_READ|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x002cfca673b000  00 00 00 00 00 00 00 00 a0 20 6a 92 1d 7f 00 00   ..........j.....
+0x002cfca673b010  5e 51 51 57 48 8b cd 48 83 e9 30 51 4c 8b dd 49   ^QQWH..H..0QL..I
+0x002cfca673b020  83 c3 08 4c 2b dc 49 8b d3 48 83 ea 18 89 55 e0   ...L+.I..H....U.
+0x002cfca673b030  49 c1 e3 08 49 83 cb 21 41 53 56 e9 f0 16 fd ff   I...I..!ASV.....
+
+0x2cfca673b000 0000             ADD [RAX], AL
+0x2cfca673b002 0000             ADD [RAX], AL
+0x2cfca673b004 0000             ADD [RAX], AL
+0x2cfca673b006 0000             ADD [RAX], AL
+0x2cfca673b008 a0206a921d7f00005e MOV AL, [0x5e00007f1d926a20]
+0x2cfca673b011 51               PUSH RCX
+0x2cfca673b012 51               PUSH RCX
+0x2cfca673b013 57               PUSH RDI
+0x2cfca673b014 488bcd           MOV RCX, RBP
+0x2cfca673b017 4883e930         SUB RCX, 0x30
+0x2cfca673b01b 51               PUSH RCX
+0x2cfca673b01c 4c8bdd           MOV R11, RBP
+0x2cfca673b01f 4983c308         ADD R11, 0x8
+0x2cfca673b023 4c2bdc           SUB R11, RSP
+0x2cfca673b026 498bd3           MOV RDX, R11
+0x2cfca673b029 4883ea18         SUB RDX, 0x18
+0x2cfca673b02d 8955e0           MOV [RBP-0x20], EDX
+0x2cfca673b030 49c1e308         SHL R11, 0x8
+0x2cfca673b034 4983cb21         OR R11, 0x21
+0x2cfca673b038 4153             PUSH R11
+0x2cfca673b03a 56               PUSH RSI
+0x2cfca673b03b e9f016fdff       JMP 0x2cfca670c730
+
+Process: gnome-shell Pid: 1389 Address: 0x2cfca676b000 File: Anonymous Mapping
+Protection: VM_READ|VM_EXEC
+Flags: VM_READ|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x002cfca676b000  00 00 00 00 00 00 00 00 60 21 6a 92 1d 7f 00 00   ........`!j.....
+0x002cfca676b010  5e 57 48 8b cd 48 83 e9 30 51 4c 8b dd 49 83 c3   ^WH..H..0QL..I..
+0x002cfca676b020  08 4c 2b dc 49 8b d3 48 83 ea 10 89 55 e0 49 c1   .L+.I..H....U.I.
+0x002cfca676b030  e3 08 49 83 cb 21 41 53 56 e9 e2 51 fa ff f4 f4   ..I..!ASV..Q....
+
+0x2cfca676b000 0000             ADD [RAX], AL
+0x2cfca676b002 0000             ADD [RAX], AL
+0x2cfca676b004 0000             ADD [RAX], AL
+0x2cfca676b006 0000             ADD [RAX], AL
+0x2cfca676b008 60               DB 0x60
+0x2cfca676b009 216a92           AND [RDX-0x6e], EBP
+0x2cfca676b00c 1d7f00005e       SBB EAX, 0x5e00007f
+0x2cfca676b011 57               PUSH RDI
+0x2cfca676b012 488bcd           MOV RCX, RBP
+0x2cfca676b015 4883e930         SUB RCX, 0x30
+0x2cfca676b019 51               PUSH RCX
+0x2cfca676b01a 4c8bdd           MOV R11, RBP
+0x2cfca676b01d 4983c308         ADD R11, 0x8
+0x2cfca676b021 4c2bdc           SUB R11, RSP
+0x2cfca676b024 498bd3           MOV RDX, R11
+0x2cfca676b027 4883ea10         SUB RDX, 0x10
+0x2cfca676b02b 8955e0           MOV [RBP-0x20], EDX
+0x2cfca676b02e 49c1e308         SHL R11, 0x8
+0x2cfca676b032 4983cb21         OR R11, 0x21
+0x2cfca676b036 4153             PUSH R11
+0x2cfca676b038 56               PUSH RSI
+0x2cfca676b039 e9e251faff       JMP 0x2cfca6710220
+0x2cfca676b03e f4               HLT
+0x2cfca676b03f f4               HLT
+
+Process: gnome-shell Pid: 1389 Address: 0x2cfca6773000 File: Anonymous Mapping
+Protection: VM_READ|VM_EXEC
+Flags: VM_READ|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_CAN_NONLINEAR
+
+0x002cfca6773000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x002cfca6773010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x002cfca6773020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x002cfca6773030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+
+0x2cfca6773000 0000             ADD [RAX], AL
+0x2cfca6773002 0000             ADD [RAX], AL
+0x2cfca6773004 0000             ADD [RAX], AL
+0x2cfca6773006 0000             ADD [RAX], AL
+0x2cfca6773008 0000             ADD [RAX], AL
+0x2cfca677300a 0000             ADD [RAX], AL
+0x2cfca677300c 0000             ADD [RAX], AL
+0x2cfca677300e 0000             ADD [RAX], AL
+0x2cfca6773010 0000             ADD [RAX], AL
+0x2cfca6773012 0000             ADD [RAX], AL
+0x2cfca6773014 0000             ADD [RAX], AL
+0x2cfca6773016 0000             ADD [RAX], AL
+0x2cfca6773018 0000             ADD [RAX], AL
+0x2cfca677301a 0000             ADD [RAX], AL
+0x2cfca677301c 0000             ADD [RAX], AL
+0x2cfca677301e 0000             ADD [RAX], AL
+0x2cfca6773020 0000             ADD [RAX], AL
+0x2cfca6773022 0000             ADD [RAX], AL
+0x2cfca6773024 0000             ADD [RAX], AL
+0x2cfca6773026 0000             ADD [RAX], AL
+0x2cfca6773028 0000             ADD [RAX], AL
+0x2cfca677302a 0000             ADD [RAX], AL
+0x2cfca677302c 0000             ADD [RAX], AL
+0x2cfca677302e 0000             ADD [RAX], AL
+0x2cfca6773030 0000             ADD [RAX], AL
+0x2cfca6773032 0000             ADD [RAX], AL
+0x2cfca6773034 0000             ADD [RAX], AL
+0x2cfca6773036 0000             ADD [RAX], AL
+0x2cfca6773038 0000             ADD [RAX], AL
+0x2cfca677303a 0000             ADD [RAX], AL
+0x2cfca677303c 0000             ADD [RAX], AL
+0x2cfca677303e 0000             ADD [RAX], AL
+
+Process: gnome-shell Pid: 1389 Address: 0x2cfca677b000 File: Anonymous Mapping
+Protection: VM_READ|VM_EXEC
+Flags: VM_READ|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x002cfca677b000  00 00 00 00 00 00 00 00 20 22 6a 92 1d 7f 00 00   ........."j.....
+0x002cfca677b010  e9 1f 00 00 00 49 bb e8 68 70 16 63 55 00 00 49   .....I..hp.cU..I
+0x002cfca677b020  8b 0b 48 89 a1 d0 00 00 00 48 c7 81 d8 00 00 00   ..H......H......
+0x002cfca677b030  00 00 00 00 55 48 8b ec 48 83 ec 30 c7 45 fc 00   ....UH..H..0.E..
+
+0x2cfca677b000 0000             ADD [RAX], AL
+0x2cfca677b002 0000             ADD [RAX], AL
+0x2cfca677b004 0000             ADD [RAX], AL
+0x2cfca677b006 0000             ADD [RAX], AL
+0x2cfca677b008 2022             AND [RDX], AH
+0x2cfca677b00a 6a92             PUSH -0x6e
+0x2cfca677b00c 1d7f0000e9       SBB EAX, 0xe900007f
+0x2cfca677b011 1f               DB 0x1f
+0x2cfca677b012 0000             ADD [RAX], AL
+0x2cfca677b014 0049bb           ADD [RCX-0x45], CL
+0x2cfca677b017 e868701663       CALL 0x2cfd098e2084
+0x2cfca677b01c 55               PUSH RBP
+0x2cfca677b01d 0000             ADD [RAX], AL
+0x2cfca677b01f 498b0b           MOV RCX, [R11]
+0x2cfca677b022 4889a1d0000000   MOV [RCX+0xd0], RSP
+0x2cfca677b029 48c781d800000000000000 MOV QWORD [RCX+0xd8], 0x0
+0x2cfca677b034 55               PUSH RBP
+0x2cfca677b035 488bec           MOV RBP, RSP
+0x2cfca677b038 4883ec30         SUB RSP, 0x30
+0x2cfca677b03c c7               DB 0xc7
+0x2cfca677b03d 45fc             CLD
+0x2cfca677b03f 00               DB 0x0
+
+Process: gnome-shell Pid: 1389 Address: 0x2cfca6780000 File: Anonymous Mapping
+Protection: VM_READ|VM_EXEC
+Flags: VM_READ|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_CAN_NONLINEAR
+
+0x002cfca6780000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x002cfca6780010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x002cfca6780020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x002cfca6780030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+
+0x2cfca6780000 0000             ADD [RAX], AL
+0x2cfca6780002 0000             ADD [RAX], AL
+0x2cfca6780004 0000             ADD [RAX], AL
+0x2cfca6780006 0000             ADD [RAX], AL
+0x2cfca6780008 0000             ADD [RAX], AL
+0x2cfca678000a 0000             ADD [RAX], AL
+0x2cfca678000c 0000             ADD [RAX], AL
+0x2cfca678000e 0000             ADD [RAX], AL
+0x2cfca6780010 0000             ADD [RAX], AL
+0x2cfca6780012 0000             ADD [RAX], AL
+0x2cfca6780014 0000             ADD [RAX], AL
+0x2cfca6780016 0000             ADD [RAX], AL
+0x2cfca6780018 0000             ADD [RAX], AL
+0x2cfca678001a 0000             ADD [RAX], AL
+0x2cfca678001c 0000             ADD [RAX], AL
+0x2cfca678001e 0000             ADD [RAX], AL
+0x2cfca6780020 0000             ADD [RAX], AL
+0x2cfca6780022 0000             ADD [RAX], AL
+0x2cfca6780024 0000             ADD [RAX], AL
+0x2cfca6780026 0000             ADD [RAX], AL
+0x2cfca6780028 0000             ADD [RAX], AL
+0x2cfca678002a 0000             ADD [RAX], AL
+0x2cfca678002c 0000             ADD [RAX], AL
+0x2cfca678002e 0000             ADD [RAX], AL
+0x2cfca6780030 0000             ADD [RAX], AL
+0x2cfca6780032 0000             ADD [RAX], AL
+0x2cfca6780034 0000             ADD [RAX], AL
+0x2cfca6780036 0000             ADD [RAX], AL
+0x2cfca6780038 0000             ADD [RAX], AL
+0x2cfca678003a 0000             ADD [RAX], AL
+0x2cfca678003c 0000             ADD [RAX], AL
+0x2cfca678003e 0000             ADD [RAX], AL
+
+Process: gnome-shell Pid: 1389 Address: 0x2cfca678b000 File: Anonymous Mapping
+Protection: VM_READ|VM_EXEC
+Flags: VM_READ|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x002cfca678b000  ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed   ................
+0x002cfca678b010  ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed   ................
+0x002cfca678b020  ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed   ................
+0x002cfca678b030  ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed   ................
+
+0x2cfca678b000 ed               IN EAX, DX
+0x2cfca678b001 ed               IN EAX, DX
+0x2cfca678b002 ed               IN EAX, DX
+0x2cfca678b003 ed               IN EAX, DX
+0x2cfca678b004 ed               IN EAX, DX
+0x2cfca678b005 ed               IN EAX, DX
+0x2cfca678b006 ed               IN EAX, DX
+0x2cfca678b007 ed               IN EAX, DX
+0x2cfca678b008 ed               IN EAX, DX
+0x2cfca678b009 ed               IN EAX, DX
+0x2cfca678b00a ed               IN EAX, DX
+0x2cfca678b00b ed               IN EAX, DX
+0x2cfca678b00c ed               IN EAX, DX
+0x2cfca678b00d ed               IN EAX, DX
+0x2cfca678b00e ed               IN EAX, DX
+0x2cfca678b00f ed               IN EAX, DX
+0x2cfca678b010 ed               IN EAX, DX
+0x2cfca678b011 ed               IN EAX, DX
+0x2cfca678b012 ed               IN EAX, DX
+0x2cfca678b013 ed               IN EAX, DX
+0x2cfca678b014 ed               IN EAX, DX
+0x2cfca678b015 ed               IN EAX, DX
+0x2cfca678b016 ed               IN EAX, DX
+0x2cfca678b017 ed               IN EAX, DX
+0x2cfca678b018 ed               IN EAX, DX
+0x2cfca678b019 ed               IN EAX, DX
+0x2cfca678b01a ed               IN EAX, DX
+0x2cfca678b01b ed               IN EAX, DX
+0x2cfca678b01c ed               IN EAX, DX
+0x2cfca678b01d ed               IN EAX, DX
+0x2cfca678b01e ed               IN EAX, DX
+0x2cfca678b01f ed               IN EAX, DX
+0x2cfca678b020 ed               IN EAX, DX
+0x2cfca678b021 ed               IN EAX, DX
+0x2cfca678b022 ed               IN EAX, DX
+0x2cfca678b023 ed               IN EAX, DX
+0x2cfca678b024 ed               IN EAX, DX
+0x2cfca678b025 ed               IN EAX, DX
+0x2cfca678b026 ed               IN EAX, DX
+0x2cfca678b027 ed               IN EAX, DX
+0x2cfca678b028 ed               IN EAX, DX
+0x2cfca678b029 ed               IN EAX, DX
+0x2cfca678b02a ed               IN EAX, DX
+0x2cfca678b02b ed               IN EAX, DX
+0x2cfca678b02c ed               IN EAX, DX
+0x2cfca678b02d ed               IN EAX, DX
+0x2cfca678b02e ed               IN EAX, DX
+0x2cfca678b02f ed               IN EAX, DX
+0x2cfca678b030 ed               IN EAX, DX
+0x2cfca678b031 ed               IN EAX, DX
+0x2cfca678b032 ed               IN EAX, DX
+0x2cfca678b033 ed               IN EAX, DX
+0x2cfca678b034 ed               IN EAX, DX
+0x2cfca678b035 ed               IN EAX, DX
+0x2cfca678b036 ed               IN EAX, DX
+0x2cfca678b037 ed               IN EAX, DX
+0x2cfca678b038 ed               IN EAX, DX
+0x2cfca678b039 ed               IN EAX, DX
+0x2cfca678b03a ed               IN EAX, DX
+0x2cfca678b03b ed               IN EAX, DX
+0x2cfca678b03c ed               IN EAX, DX
+0x2cfca678b03d ed               IN EAX, DX
+0x2cfca678b03e ed               IN EAX, DX
+0x2cfca678b03f ed               IN EAX, DX
+
+Process: gnome-shell Pid: 1389 Address: 0x2cfca678c000 File: Anonymous Mapping
+Protection: VM_READ|VM_EXEC
+Flags: VM_READ|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_CAN_NONLINEAR
+
+0x002cfca678c000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x002cfca678c010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x002cfca678c020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x002cfca678c030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+
+0x2cfca678c000 0000             ADD [RAX], AL
+0x2cfca678c002 0000             ADD [RAX], AL
+0x2cfca678c004 0000             ADD [RAX], AL
+0x2cfca678c006 0000             ADD [RAX], AL
+0x2cfca678c008 0000             ADD [RAX], AL
+0x2cfca678c00a 0000             ADD [RAX], AL
+0x2cfca678c00c 0000             ADD [RAX], AL
+0x2cfca678c00e 0000             ADD [RAX], AL
+0x2cfca678c010 0000             ADD [RAX], AL
+0x2cfca678c012 0000             ADD [RAX], AL
+0x2cfca678c014 0000             ADD [RAX], AL
+0x2cfca678c016 0000             ADD [RAX], AL
+0x2cfca678c018 0000             ADD [RAX], AL
+0x2cfca678c01a 0000             ADD [RAX], AL
+0x2cfca678c01c 0000             ADD [RAX], AL
+0x2cfca678c01e 0000             ADD [RAX], AL
+0x2cfca678c020 0000             ADD [RAX], AL
+0x2cfca678c022 0000             ADD [RAX], AL
+0x2cfca678c024 0000             ADD [RAX], AL
+0x2cfca678c026 0000             ADD [RAX], AL
+0x2cfca678c028 0000             ADD [RAX], AL
+0x2cfca678c02a 0000             ADD [RAX], AL
+0x2cfca678c02c 0000             ADD [RAX], AL
+0x2cfca678c02e 0000             ADD [RAX], AL
+0x2cfca678c030 0000             ADD [RAX], AL
+0x2cfca678c032 0000             ADD [RAX], AL
+0x2cfca678c034 0000             ADD [RAX], AL
+0x2cfca678c036 0000             ADD [RAX], AL
+0x2cfca678c038 0000             ADD [RAX], AL
+0x2cfca678c03a 0000             ADD [RAX], AL
+0x2cfca678c03c 0000             ADD [RAX], AL
+0x2cfca678c03e 0000             ADD [RAX], AL
+
+Process: gnome-shell Pid: 1389 Address: 0x7f1d902ca000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007f1d902ca000  00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00   ........C.......
+0x007f1d902ca010  49 bb d0 8e 78 d6 1d 7f 00 00 49 ba 10 a0 2c 90   I...x.....I...,.
+0x007f1d902ca020  1d 7f 00 00 f8 49 ff e3 68 40 f8 17 63 55 00 00   .....I..h@..cU..
+0x007f1d902ca030  90 81 46 db 1d 7f 00 00 50 40 f8 17 63 55 00 00   ..F.....P@..cU..
+
+0x7f1d902ca000 0000             ADD [RAX], AL
+0x7f1d902ca002 0000             ADD [RAX], AL
+0x7f1d902ca004 0000             ADD [RAX], AL
+0x7f1d902ca006 0000             ADD [RAX], AL
+0x7f1d902ca008 430000           ADD [R8], AL
+0x7f1d902ca00b 0000             ADD [RAX], AL
+0x7f1d902ca00d 0000             ADD [RAX], AL
+0x7f1d902ca00f 0049bb           ADD [RCX-0x45], CL
+0x7f1d902ca012 d08e78d61d7f     ROR BYTE [RSI+0x7f1dd678], 0x1
+0x7f1d902ca018 0000             ADD [RAX], AL
+0x7f1d902ca01a 49ba10a02c901d7f0000 MOV R10, 0x7f1d902ca010
+0x7f1d902ca024 f8               CLC
+0x7f1d902ca025 49ffe3           JMP R11
+0x7f1d902ca028 6840f81763       PUSH DWORD 0x6317f840
+0x7f1d902ca02d 55               PUSH RBP
+0x7f1d902ca02e 0000             ADD [RAX], AL
+0x7f1d902ca030 90               NOP
+0x7f1d902ca031 8146db1d7f0000   ADD DWORD [RSI-0x25], 0x7f1d
+0x7f1d902ca038 50               PUSH RAX
+0x7f1d902ca039 40f8             CLC
+0x7f1d902ca03b 17               DB 0x17
+0x7f1d902ca03c 635500           MOVSXD EDX, DWORD [RBP+0x0]
+0x7f1d902ca03f 00               DB 0x0
+
+Process: gnome-shell Pid: 1389 Address: 0x7f1d902d8000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007f1d902d8000  00 00 00 00 00 00 00 00 41 00 00 00 00 00 00 00   ........A.......
+0x007f1d902d8010  c0 81 2d 90 1d 7f 00 00 a0 a2 98 d6 1d 7f 00 00   ..-.............
+0x007f1d902d8020  1d 7f 00 00 f8 49 ff e3 b8 80 c1 17 63 55 00 00   .....I......cU..
+0x007f1d902d8030  90 81 46 db 1d 7f 00 00 a0 80 c1 17 63 55 00 00   ..F.........cU..
+
+0x7f1d902d8000 0000             ADD [RAX], AL
+0x7f1d902d8002 0000             ADD [RAX], AL
+0x7f1d902d8004 0000             ADD [RAX], AL
+0x7f1d902d8006 0000             ADD [RAX], AL
+0x7f1d902d8008 410000           ADD [R8], AL
+0x7f1d902d800b 0000             ADD [RAX], AL
+0x7f1d902d800d 0000             ADD [RAX], AL
+0x7f1d902d800f 00c0             ADD AL, AL
+0x7f1d902d8011 812d901d7f0000a0a298 SUB DWORD [RIP+0x7f1d90], 0x98a2a000
+0x7f1d902d801b d6               DB 0xd6
+0x7f1d902d801c 1d7f00001d       SBB EAX, 0x1d00007f
+0x7f1d902d8021 7f00             JG 0x7f1d902d8023
+0x7f1d902d8023 00f8             ADD AL, BH
+0x7f1d902d8025 49ffe3           JMP R11
+0x7f1d902d8028 b880c11763       MOV EAX, 0x6317c180
+0x7f1d902d802d 55               PUSH RBP
+0x7f1d902d802e 0000             ADD [RAX], AL
+0x7f1d902d8030 90               NOP
+0x7f1d902d8031 8146db1d7f0000   ADD DWORD [RSI-0x25], 0x7f1d
+0x7f1d902d8038 a0               DB 0xa0
+0x7f1d902d8039 80c117           ADD CL, 0x17
+0x7f1d902d803c 635500           MOVSXD EDX, DWORD [RBP+0x0]
+0x7f1d902d803f 00               DB 0x0
+
+Process: gnome-shell Pid: 1389 Address: 0x7f1d92737000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007f1d92737000  00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00   ........C.......
+0x007f1d92737010  49 bb d0 8e 78 d6 1d 7f 00 00 49 ba 10 70 73 92   I...x.....I..ps.
+0x007f1d92737020  1d 7f 00 00 f9 49 ff e3 f8 35 dc 16 63 55 00 00   .....I...5..cU..
+0x007f1d92737030  90 81 46 db 1d 7f 00 00 e0 35 dc 16 63 55 00 00   ..F......5..cU..
+
+0x7f1d92737000 0000             ADD [RAX], AL
+0x7f1d92737002 0000             ADD [RAX], AL
+0x7f1d92737004 0000             ADD [RAX], AL
+0x7f1d92737006 0000             ADD [RAX], AL
+0x7f1d92737008 430000           ADD [R8], AL
+0x7f1d9273700b 0000             ADD [RAX], AL
+0x7f1d9273700d 0000             ADD [RAX], AL
+0x7f1d9273700f 0049bb           ADD [RCX-0x45], CL
+0x7f1d92737012 d08e78d61d7f     ROR BYTE [RSI+0x7f1dd678], 0x1
+0x7f1d92737018 0000             ADD [RAX], AL
+0x7f1d9273701a 49ba107073921d7f0000 MOV R10, 0x7f1d92737010
+0x7f1d92737024 f9               STC
+0x7f1d92737025 49ffe3           JMP R11
+0x7f1d92737028 f8               CLC
+0x7f1d92737029 35dc166355       XOR EAX, 0x556316dc
+0x7f1d9273702e 0000             ADD [RAX], AL
+0x7f1d92737030 90               NOP
+0x7f1d92737031 8146db1d7f0000   ADD DWORD [RSI-0x25], 0x7f1d
+0x7f1d92737038 e035             LOOPNZ 0x7f1d9273706f
+0x7f1d9273703a dc16             FCOM QWORD [RSI]
+0x7f1d9273703c 635500           MOVSXD EDX, DWORD [RBP+0x0]
+0x7f1d9273703f 00               DB 0x0
+
+Process: gnome-shell Pid: 1389 Address: 0x7f1dc4100000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007f1dc4100000  00 00 00 00 00 00 00 00 43 00 00 00 00 00 00 00   ........C.......
+0x007f1dc4100010  49 bb d0 8e 78 d6 1d 7f 00 00 49 ba 10 00 10 c4   I...x.....I.....
+0x007f1dc4100020  1d 7f 00 00 f8 49 ff e3 e8 16 bf 16 63 55 00 00   .....I......cU..
+0x007f1dc4100030  90 81 46 db 1d 7f 00 00 d0 16 bf 16 63 55 00 00   ..F.........cU..
+
+0x7f1dc4100000 0000             ADD [RAX], AL
+0x7f1dc4100002 0000             ADD [RAX], AL
+0x7f1dc4100004 0000             ADD [RAX], AL
+0x7f1dc4100006 0000             ADD [RAX], AL
+0x7f1dc4100008 430000           ADD [R8], AL
+0x7f1dc410000b 0000             ADD [RAX], AL
+0x7f1dc410000d 0000             ADD [RAX], AL
+0x7f1dc410000f 0049bb           ADD [RCX-0x45], CL
+0x7f1dc4100012 d08e78d61d7f     ROR BYTE [RSI+0x7f1dd678], 0x1
+0x7f1dc4100018 0000             ADD [RAX], AL
+0x7f1dc410001a 49ba100010c41d7f0000 MOV R10, 0x7f1dc4100010
+0x7f1dc4100024 f8               CLC
+0x7f1dc4100025 49ffe3           JMP R11
+0x7f1dc4100028 e816bf1663       CALL 0x7f1e2726bf43
+0x7f1dc410002d 55               PUSH RBP
+0x7f1dc410002e 0000             ADD [RAX], AL
+0x7f1dc4100030 90               NOP
+0x7f1dc4100031 8146db1d7f0000   ADD DWORD [RSI-0x25], 0x7f1d
+0x7f1dc4100038 d016             RCL BYTE [RSI], 0x1
+0x7f1dc410003a bf16635500       MOV EDI, 0x556316
+0x7f1dc410003f 00               DB 0x0
+
+Process: gnome-shell Pid: 1389 Address: 0x7f1ddd3b7000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007f1ddd3b7000  64 4c 8b 1c 25 c8 fb ff ff 41 ff a3 58 34 00 00   dL..%....A..X4..
+0x007f1ddd3b7010  64 4c 8b 1c 25 c8 fb ff ff 41 ff a3 58 34 00 00   dL..%....A..X4..
+0x007f1ddd3b7020  64 4c 8b 1c 25 c8 fb ff ff 41 ff a3 58 34 00 00   dL..%....A..X4..
+0x007f1ddd3b7030  64 4c 8b 1c 25 c8 fb ff ff 41 ff a3 58 34 00 00   dL..%....A..X4..
+
+0x7f1ddd3b7000 644c8b1c25c8fbffff MOV R11, [FS:0xfffffffffffffbc8]
+0x7f1ddd3b7009 41ffa358340000   JMP QWORD [R11+0x3458]
+0x7f1ddd3b7010 644c8b1c25c8fbffff MOV R11, [FS:0xfffffffffffffbc8]
+0x7f1ddd3b7019 41ffa358340000   JMP QWORD [R11+0x3458]
+0x7f1ddd3b7020 644c8b1c25c8fbffff MOV R11, [FS:0xfffffffffffffbc8]
+0x7f1ddd3b7029 41ffa358340000   JMP QWORD [R11+0x3458]
+0x7f1ddd3b7030 644c8b1c25c8fbffff MOV R11, [FS:0xfffffffffffffbc8]
+0x7f1ddd3b7039 41ffa358340000   JMP QWORD [R11+0x3458]
+
+Process: meterpreter Pid: 1751 Address: 0x400000 File: /home/julien/Downloads/meterpreter
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_DENYWRITE|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x00000000400000  7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00   .ELF............
+0x00000000400010  02 00 3e 00 01 00 00 00 78 00 40 00 00 00 00 00   ..>.....x.@.....
+0x00000000400020  40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   @...............
+0x00000000400030  00 00 00 00 40 00 38 00 01 00 00 00 00 00 00 00   ....@.8.........
+
+0x400000 7f45             JG 0x400047
+0x400002 4c460201         ADD R8B, [RCX]
+0x400006 0100             ADD [RAX], EAX
+0x400008 0000             ADD [RAX], AL
+0x40000a 0000             ADD [RAX], AL
+0x40000c 0000             ADD [RAX], AL
+0x40000e 0000             ADD [RAX], AL
+0x400010 0200             ADD AL, [RAX]
+0x400012 3e0001           ADD [RCX], AL
+0x400015 0000             ADD [RAX], AL
+0x400017 007800           ADD [RAX+0x0], BH
+0x40001a 400000           ADD [RAX], AL
+0x40001d 0000             ADD [RAX], AL
+0x40001f 004000           ADD [RAX+0x0], AL
+0x400022 0000             ADD [RAX], AL
+0x400024 0000             ADD [RAX], AL
+0x400026 0000             ADD [RAX], AL
+0x400028 0000             ADD [RAX], AL
+0x40002a 0000             ADD [RAX], AL
+0x40002c 0000             ADD [RAX], AL
+0x40002e 0000             ADD [RAX], AL
+0x400030 0000             ADD [RAX], AL
+0x400032 0000             ADD [RAX], AL
+0x400034 400038           ADD [RAX], DIL
+0x400037 0001             ADD [RCX], AL
+0x400039 0000             ADD [RAX], AL
+0x40003b 0000             ADD [RAX], AL
+0x40003d 0000             ADD [RAX], AL
+0x40003f 00               DB 0x0
+
+Process: meterpreter Pid: 1751 Address: 0x1aeb000 File: [heap]
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x00000001aeb000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x00000001aeb010  01 00 00 00 00 00 00 00 21 00 00 00 00 00 00 00   ........!.......
+0x00000001aeb020  6d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   m...............
+0x00000001aeb030  21 00 00 00 00 00 00 00 81 0d 00 00 00 00 00 00   !...............
+
+0x1aeb000 0000             ADD [RAX], AL
+0x1aeb002 0000             ADD [RAX], AL
+0x1aeb004 0000             ADD [RAX], AL
+0x1aeb006 0000             ADD [RAX], AL
+0x1aeb008 0000             ADD [RAX], AL
+0x1aeb00a 0000             ADD [RAX], AL
+0x1aeb00c 0000             ADD [RAX], AL
+0x1aeb00e 0000             ADD [RAX], AL
+0x1aeb010 0100             ADD [RAX], EAX
+0x1aeb012 0000             ADD [RAX], AL
+0x1aeb014 0000             ADD [RAX], AL
+0x1aeb016 0000             ADD [RAX], AL
+0x1aeb018 2100             AND [RAX], EAX
+0x1aeb01a 0000             ADD [RAX], AL
+0x1aeb01c 0000             ADD [RAX], AL
+0x1aeb01e 0000             ADD [RAX], AL
+0x1aeb020 6d               INS DWORD [RDI], DX
+0x1aeb021 0000             ADD [RAX], AL
+0x1aeb023 0000             ADD [RAX], AL
+0x1aeb025 0000             ADD [RAX], AL
+0x1aeb027 0000             ADD [RAX], AL
+0x1aeb029 0000             ADD [RAX], AL
+0x1aeb02b 0000             ADD [RAX], AL
+0x1aeb02d 0000             ADD [RAX], AL
+0x1aeb02f 0021             ADD [RCX], AH
+0x1aeb031 0000             ADD [RAX], AL
+0x1aeb033 0000             ADD [RAX], AL
+0x1aeb035 0000             ADD [RAX], AL
+0x1aeb037 00810d000000     ADD [RCX+0xd], AL
+0x1aeb03d 0000             ADD [RAX], AL
+0x1aeb03f 00               DB 0x0
+
+Process: meterpreter Pid: 1751 Address: 0x7f11b5e1e000 File: Anonymous Mapping
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_ACCOUNT|VM_CAN_NONLINEAR
+
+0x007f11b5e1e000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x007f11b5e1e010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x007f11b5e1e020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x007f11b5e1e030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+
+0x7f11b5e1e000 0000             ADD [RAX], AL
+0x7f11b5e1e002 0000             ADD [RAX], AL
+0x7f11b5e1e004 0000             ADD [RAX], AL
+0x7f11b5e1e006 0000             ADD [RAX], AL
+0x7f11b5e1e008 0000             ADD [RAX], AL
+0x7f11b5e1e00a 0000             ADD [RAX], AL
+0x7f11b5e1e00c 0000             ADD [RAX], AL
+0x7f11b5e1e00e 0000             ADD [RAX], AL
+0x7f11b5e1e010 0000             ADD [RAX], AL
+0x7f11b5e1e012 0000             ADD [RAX], AL
+0x7f11b5e1e014 0000             ADD [RAX], AL
+0x7f11b5e1e016 0000             ADD [RAX], AL
+0x7f11b5e1e018 0000             ADD [RAX], AL
+0x7f11b5e1e01a 0000             ADD [RAX], AL
+0x7f11b5e1e01c 0000             ADD [RAX], AL
+0x7f11b5e1e01e 0000             ADD [RAX], AL
+0x7f11b5e1e020 0000             ADD [RAX], AL
+0x7f11b5e1e022 0000             ADD [RAX], AL
+0x7f11b5e1e024 0000             ADD [RAX], AL
+0x7f11b5e1e026 0000             ADD [RAX], AL
+0x7f11b5e1e028 0000             ADD [RAX], AL
+0x7f11b5e1e02a 0000             ADD [RAX], AL
+0x7f11b5e1e02c 0000             ADD [RAX], AL
+0x7f11b5e1e02e 0000             ADD [RAX], AL
+0x7f11b5e1e030 0000             ADD [RAX], AL
+0x7f11b5e1e032 0000             ADD [RAX], AL
+0x7f11b5e1e034 0000             ADD [RAX], AL
+0x7f11b5e1e036 0000             ADD [RAX], AL
+0x7f11b5e1e038 0000             ADD [RAX], AL
+0x7f11b5e1e03a 0000             ADD [RAX], AL
+0x7f11b5e1e03c 0000             ADD [RAX], AL
+0x7f11b5e1e03e 0000             ADD [RAX], AL
+
+Process: meterpreter Pid: 1751 Address: 0x7ffc9d2f9000 File: [stack]
+Protection: VM_READ|VM_WRITE|VM_EXEC
+Flags: VM_READ|VM_WRITE|VM_EXEC|VM_MAYREAD|VM_MAYWRITE|VM_MAYEXEC|VM_GROWSDOWN|VM_ACCOUNT
+
+0x007ffc9d2f9000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x007ffc9d2f9010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x007ffc9d2f9020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0x007ffc9d2f9030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+
+0x7ffc9d2f9000 0000             ADD [RAX], AL
+0x7ffc9d2f9002 0000             ADD [RAX], AL
+0x7ffc9d2f9004 0000             ADD [RAX], AL
+0x7ffc9d2f9006 0000             ADD [RAX], AL
+0x7ffc9d2f9008 0000             ADD [RAX], AL
+0x7ffc9d2f900a 0000             ADD [RAX], AL
+0x7ffc9d2f900c 0000             ADD [RAX], AL
+0x7ffc9d2f900e 0000             ADD [RAX], AL
+0x7ffc9d2f9010 0000             ADD [RAX], AL
+0x7ffc9d2f9012 0000             ADD [RAX], AL
+0x7ffc9d2f9014 0000             ADD [RAX], AL
+0x7ffc9d2f9016 0000             ADD [RAX], AL
+0x7ffc9d2f9018 0000             ADD [RAX], AL
+0x7ffc9d2f901a 0000             ADD [RAX], AL
+0x7ffc9d2f901c 0000             ADD [RAX], AL
+0x7ffc9d2f901e 0000             ADD [RAX], AL
+0x7ffc9d2f9020 0000             ADD [RAX], AL
+0x7ffc9d2f9022 0000             ADD [RAX], AL
+0x7ffc9d2f9024 0000             ADD [RAX], AL
+0x7ffc9d2f9026 0000             ADD [RAX], AL
+0x7ffc9d2f9028 0000             ADD [RAX], AL
+0x7ffc9d2f902a 0000             ADD [RAX], AL
+0x7ffc9d2f902c 0000             ADD [RAX], AL
+0x7ffc9d2f902e 0000             ADD [RAX], AL
+0x7ffc9d2f9030 0000             ADD [RAX], AL
+0x7ffc9d2f9032 0000             ADD [RAX], AL
+0x7ffc9d2f9034 0000             ADD [RAX], AL
+0x7ffc9d2f9036 0000             ADD [RAX], AL
+0x7ffc9d2f9038 0000             ADD [RAX], AL
+0x7ffc9d2f903a 0000             ADD [RAX], AL
+0x7ffc9d2f903c 0000             ADD [RAX], AL
+0x7ffc9d2f903e 0000             ADD [RAX], AL
+
