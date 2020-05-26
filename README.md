@@ -8,3 +8,5 @@
 4. [Исследовать уязвимости уровня ядра Linux](https://github.com/toolen/otus-linux-security-hw/tree/hw-06)
 5. [Упаковать приложение в docker, провести харденинг собранного образа](https://github.com/toolen/otus-linux-security-hw/tree/hw-05)
 6. [Установка и эксплуатация OSSIM](https://github.com/toolen/otus-linux-security-hw/tree/hw-06-ossim)
+7. [Анализ дампов оперативной памяти](https://github.com/toolen/otus-linux-security-hw/tree/hw-07-volatility)
+10. [Работаем с LUKS](https://github.com/toolen/otus-linux-security-hw/tree/hw-10)
